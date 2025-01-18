@@ -1,0 +1,272 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+header {
+    background-color: #006994;
+    color: white;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav .menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav .menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+nav .hamburger {
+    display: none;
+    font-size: 1.8em;
+    cursor: pointer;
+}
+
+/* Sections */
+section {
+    padding: 80px 20px;
+}
+
+#home {
+    background: #e0f7fa;
+    text-align: center;
+    padding-top: 120px;
+}
+
+#quiz, #gallery, #fun-facts {
+    background: #f0f0f0;
+}
+
+/* Quiz Card Styles */
+#quiz-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+
+#quiz-container {
+    background: #7bd5f9;
+    color: #024359;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#quiz-container h3 {
+    margin-bottom: 20px;
+}
+
+#quiz-options button {
+    background: #144d62;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px 0;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#quiz-options button:hover {
+    background: #00384d;
+}
+
+button {
+    background-color: #004d66;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #00384d;
+}
+
+/* Fun Fact Styles */
+#fun-fact-display {
+    margin-top: 10px;
+    background: #006994;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+#gallery {
+    text-align: center;
+    margin: 20px auto;
+}
+/* Gallery Styles */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust column size dynamically */
+    gap: 20px; /* Add spacing between items */
+    padding: 20px; /* Add padding inside the gallery */
+    width: 100%; /* Ensure gallery spans the full width of its container */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.gallery-item {
+    text-align: center;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+    width: 100%; /* Make the image responsive */
+    height: 300px; /* Uniform height for all images */
+    object-fit: cover; /* Ensure images fill the box proportionally */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05); /* Slight hover zoom effect */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-caption {
+    padding: 10px;
+    background: #00796b;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav .menu {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background-color: #004d66;
+        padding: 20px;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        border-radius: 10px;
+    }
+
+    nav .menu.active {
+        display: flex;
+    }
+
+    nav .hamburger {
+        display: block;
+    }
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #0e0e0e;
+    color: white;
+}
+
+header.dark-mode {
+    background-color: #1f1f1f;
+}
+
+header.dark-mode nav .menu li a {
+    color: white;
+}
+
+header.dark-mode .hamburger {
+    color: white;
+}
+
+nav.dark-mode .menu li a {
+    color: white;
+}
+
+#home.dark-mode {
+    background-color: #464141;
+}
+
+#quiz.dark-mode, #gallery.dark-mode, #fun-facts.dark-mode {
+    background-color: #333;
+}
+
+/* Quiz Container */
+#quiz-container.dark-mode {
+    background-color: #322d49;  /* Darker background for quiz */
+    color: #f0f0f0;          /* Light text */
+    border: 1px solid #777;  /* Light border to separate quiz container */
+}
+
+/* Quiz Text (question) */
+#quiz-container h3.dark-mode {
+    color: #f0f0f0;
+}
+
+
+
+/* Dark mode specific styles */
+button.dark-mode {
+    background-color: #333 !important;
+    color: #f0f0f0 !important;
+    border: none;
+}
+
+#fun-fact-display.dark-mode {
+    background-color: #333;
+}
+
+.gallery-item.dark-mode {
+    background: #444;
+    border: 1px solid #666;
+}
+
+.gallery-item img.dark-mode {
+    filter: brightness(70%);
+}
+
+.gallery-caption.dark-mode {
+    background: #00796b;
+    color: white;
+}
+
+
+
+

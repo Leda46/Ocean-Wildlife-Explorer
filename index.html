@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocean Wildlife Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <header>
+        <nav>
+            <div class="logo">Ocean Wildlife Explorer</div>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+            <ul class="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#fun-facts">Fun Facts</a></li>
+            </ul>
+            <button class="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h1>Welcome to Ocean Wildlife Explorer</h1>
+        <p>Explore the ocean's amazing wildlife through quizzes, fun facts, and galleries!</p>
+    </section>
+
+    <!-- Quiz Section -->
+<section id="quiz">
+    <h2>Quiz</h2>
+    <div id="quiz-container">
+        <h3 id="quiz-question"></h3>
+        <div id="quiz-options"></div>
+        <p id="quiz-result"></p>
+        <p id="score">Score: 0</p>
+        <p id="quiz-score" style="display: none;">Your final score: <span id="score"></span></p>
+        <button id="replay-btn" style="display: none;" onclick="restartQuiz()">Replay</button>
+    </div>
+</section>
+
+
+    
+
+    <!-- Gallery Section -->
+<section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="images/blue-whale.jpg" alt="Blue Whale">
+            <div class="gallery-caption">Blue Whale</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/sea-turtle.jpg" alt="Sea Turtle">
+            <div class="gallery-caption">Sea Turtle</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/jellyfish.jpg" alt="Jellyfish">
+            <div class="gallery-caption">Jellyfish</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/dolphin.jpg" alt="Dolphin">
+            <div class="gallery-caption">Dolphin</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/shark.jpg" alt="Shark">
+            <div class="gallery-caption">Shark</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/sea-otter.jpg" alt="Sea Otter">
+            <div class="gallery-caption">Sea Otter</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/clownfish.jpg" alt="Clownfish">
+            <div class="gallery-caption">Clownfish</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/octopus.jpg" alt="Octopus">
+            <div class="gallery-caption">Octopus</div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Fun Facts Section -->
+    <section id="fun-facts">
+        <h2>Fun Facts</h2>
+        <button id="fun-facts-btn" onclick="showFunFact()">Show a Fun Fact</button>
+        <div id="fun-fact-display"></div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
