@@ -230,7 +230,7 @@ nav.dark-mode .menu li a {
 
 /* Quiz Container */
 #quiz-container.dark-mode {
-    background-color: #322d49;  /* Darker background for quiz */
+    background-color: #353435;  /* Darker background for quiz */
     color: #f0f0f0;          /* Light text */
     border: 1px solid #777;  /* Light border to separate quiz container */
 }
