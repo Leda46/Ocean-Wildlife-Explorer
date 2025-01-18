@@ -31,7 +31,7 @@ Welcome to the **Ocean Wildlife Explorer**! This interactive web page allows use
 
 ## Screenshot
 
-![Screenshot of the Ocean Wildlife Quiz](assets/images/quiz-screenshot.png)
+![Screenshot of the Ocean Wildlife Quiz](images/quiz-screenshot.png)
 
 
 Thank you for trying out the **Ocean Wildlife Quiz**! We hope you enjoyed learning more about marine life while testing your knowledge.
